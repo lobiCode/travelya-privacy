@@ -163,3 +163,5 @@ data rights directly in the app or by uninstalling it. For anything else, contac
 
 Because no data ever reaches the developer's systems, requests that concern data held by AI
 providers (section 4) must be directed to those providers through your account with them.
+
+Terms of use (liability, AI content, navigation): <https://lobicode.github.io/travelya-privacy/terms/>

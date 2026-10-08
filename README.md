@@ -9,17 +9,19 @@ repositories, so the page goes live in two steps when TravelYa ships:
 2. **Settings → Pages** → Deploy from a branch → `main` / `/ (root)` → Save
 
 The public URL will then be: <https://lobicode.github.io/travelya-privacy/>
+(terms of use at <https://lobicode.github.io/travelya-privacy/terms/>)
 
-That URL goes into Play Console → App content → Privacy policy.
+The privacy policy URL goes into Play Console → App content → Privacy policy.
 
-## Updating the policy
+## Updating the documents
 
-The source of truth is `docs/privacy-policy.md` in the private `travelya` repo.
-After editing it there, mirror it here:
+The sources of truth are `docs/privacy-policy.md` and `docs/terms-of-use.md` in the private
+`travelya` repo. After editing them there, mirror both here:
 
 ```bash
 cp ../travelya/docs/privacy-policy.md index.md
-git commit -am "Update privacy policy"
+{ printf -- '---\npermalink: /terms/\n---\n\n'; cat ../travelya/docs/terms-of-use.md; } > terms.md
+git commit -am "Update legal documents"
 git push
 ```
 
