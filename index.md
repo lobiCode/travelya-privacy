@@ -159,12 +159,12 @@ You can ask for an email to be deleted at any time.
 
 ## 9. Third-party privacy policies
 
-- z.ai: <https://z.ai/privacy>
+- z.ai: <https://docs.z.ai/legal-agreement/privacy-policy>
 - Google (Gemini API, Play services, backups): <https://policies.google.com/privacy>
 - OpenAI: <https://openai.com/policies/privacy-policy>
 - Komoot (Photon): <https://www.komoot.com/privacy>
 - OpenFreeMap: <https://openfreemap.org/privacy/>
-- Geofabrik: <https://www.geofabrik.de/privacy.html>
+- Geofabrik: <https://www.geofabrik.de/geofabrik/imprint.html>
 - Wikimedia Foundation: <https://foundation.wikimedia.org/wiki/Policy:Privacy_policy>
 
 ## 10. Children
