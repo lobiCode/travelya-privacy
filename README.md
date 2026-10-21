@@ -28,3 +28,19 @@ git push
 If the policy changes materially, also bump the effective date at the top of the
 document and re-check that the Play Console **Data safety** form still matches
 (section 4 and 5 of the policy are what the form is derived from).
+
+## Help & tutorials page
+
+`help/index.html` is a hand-written page (no Jekyll front matter, so it is served as-is) at
+<https://lobicode.github.io/travelya-privacy/help/>, opened from the app (Settings → Help &
+tutorials, and the empty trip list). Colors and radii are the app's Trail tokens.
+
+To add a video, copy one `<a class="video">` block and change its link, thumbnail, duration, chip,
+title and text. Store the thumbnail next to the page (`help/<name>.jpg`, 960×540) rather than
+loading it from YouTube, so the page makes no third-party requests:
+
+```bash
+curl -o help/<name>.jpg https://i.ytimg.com/vi/<video-id>/maxresdefault.jpg
+```
+
+The page is content only: changing it never needs an app release.

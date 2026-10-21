@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TravelYa Help</title>
+<meta name="description" content="Short videos that show how to plan, import and travel with TravelYa.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#FBF9F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#13140F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="icon.png">
+<style>
+  /* Trail palette, verbatim from app/src/main/java/com/travelya/presentation/ui/theme/Color.kt */
+  :root {
+    --primary: #2D694D;
+    --on-primary: #FFFFFF;
+    --primary-container: #B1F0CD;
+    --on-primary-container: #105137;
+    --secondary-container: #FFDBCE;
+    --on-secondary-container: #7A2F0E;
+    --tertiary: #31647B;
+    --surface: #FBF9F1;
+    --on-surface: #1B1C17;
+    --on-surface-variant: #46483C;
+    --outline-variant: #C7C8B8;
+    --surface-container-low: #F6F4EB;
+    --surface-container: #F0EEE6;
+    --surface-container-high: #EAE8E0;
+    /* Shapes.kt */
+    --shape-small: 10px;
+    --shape-medium: 16px;
+    --shape-large: 24px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --primary: #96D4B2;
+      --on-primary: #003824;
+      --primary-container: #105137;
+      --on-primary-container: #B1F0CD;
+      --secondary-container: #7A2F0E;
+      --on-secondary-container: #FFDBCE;
+      --tertiary: #9BCDE8;
+      --surface: #13140F;
+      --on-surface: #E4E3DA;
+      --on-surface-variant: #C7C8B8;
+      --outline-variant: #46483C;
+      --surface-container-low: #1B1C17;
+      --surface-container: #1F201B;
+      --surface-container-high: #2A2A25;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--surface);
+    color: var(--on-surface);
+    font: 16px/24px Roboto, system-ui, -apple-system, "Segoe UI", sans-serif;
+    letter-spacing: 0.031em;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 32px 16px 48px; }
+  a { color: var(--primary); }
+  a:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; border-radius: var(--shape-small); }
+
+  header { display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: 18px; }
+  .brand img { width: 40px; height: 40px; border-radius: var(--shape-small); }
+  h1 { margin: 0; font-size: 32px; line-height: 40px; font-weight: 600; letter-spacing: 0; }
+  .lede { margin: 0; color: var(--on-surface-variant); max-width: 56ch; }
+
+  h2 {
+    margin: 40px 0 12px; padding: 0 4px;
+    font-size: 14px; line-height: 20px; font-weight: 600; letter-spacing: 0.007em;
+    color: var(--primary);
+  }
+
+  .videos { display: grid; gap: 16px; }
+  .video {
+    display: grid; grid-template-columns: 1fr; overflow: hidden;
+    background: var(--surface-container-low);
+    border-radius: var(--shape-large);
+    text-decoration: none; color: inherit;
+    transition: background-color 150ms ease;
+  }
+  .video:hover { background: var(--surface-container); }
+  .video:active { background: var(--surface-container-high); }
+  .thumb { position: relative; aspect-ratio: 16 / 9; background: var(--surface-container-high); }
+  .thumb img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .play {
+    position: absolute; inset: 0; margin: auto; width: 64px; height: 64px;
+    display: grid; place-items: center; border-radius: 50%;
+    background: var(--primary); color: var(--on-primary);
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.25);
+  }
+  .duration {
+    position: absolute; right: 12px; bottom: 12px; padding: 2px 8px;
+    border-radius: var(--shape-small);
+    background: rgb(0 0 0 / 0.72); color: #fff;
+    font-size: 12px; line-height: 16px; font-weight: 500;
+  }
+  .body { padding: 16px 20px 20px; display: flex; flex-direction: column; gap: 8px; }
+  .chip {
+    align-self: flex-start; padding: 2px 10px; border-radius: 999px;
+    background: var(--primary-container); color: var(--on-primary-container);
+    font-size: 12px; line-height: 20px; font-weight: 500;
+  }
+  .video h3 { margin: 0; font-size: 18px; line-height: 24px; font-weight: 600; letter-spacing: 0; }
+  .video p { margin: 0; color: var(--on-surface-variant); font-size: 14px; line-height: 20px; }
+  .watch { margin-top: 4px; color: var(--primary); font-weight: 500; font-size: 14px; }
+  @media (min-width: 600px) {
+    .video { grid-template-columns: 280px 1fr; }
+    .thumb { aspect-ratio: auto; min-height: 158px; }
+    .body { justify-content: center; }
+  }
+
+  .steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; border-radius: var(--shape-large); overflow: hidden; }
+  .steps li { display: flex; gap: 16px; padding: 16px 20px; background: var(--surface-container-low); }
+  .steps .n {
+    flex: none; width: 32px; height: 32px; border-radius: 50%;
+    display: grid; place-items: center;
+    background: var(--primary-container); color: var(--on-primary-container);
+    font-weight: 600; font-size: 14px;
+  }
+  .steps strong { display: block; font-weight: 500; }
+  .steps span { color: var(--on-surface-variant); font-size: 14px; line-height: 20px; }
+
+  .help {
+    margin-top: 40px; padding: 20px; display: flex; gap: 16px; align-items: flex-start;
+    border-radius: var(--shape-large);
+    background: var(--secondary-container); color: var(--on-secondary-container);
+  }
+  .help svg { flex: none; margin-top: 2px; }
+  .help h2 { margin: 0 0 4px; padding: 0; color: inherit; font-size: 16px; line-height: 24px; }
+  .help p { margin: 0; font-size: 14px; line-height: 20px; }
+  .help a { color: inherit; font-weight: 500; }
+
+  footer {
+    margin-top: 40px; padding: 20px 4px 0; border-top: 1px solid var(--outline-variant);
+    display: flex; flex-wrap: wrap; gap: 8px 20px;
+    font-size: 14px; color: var(--on-surface-variant);
+  }
+  footer a { color: inherit; }
+
+  @media (prefers-reduced-motion: reduce) { .video { transition: none; } }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="brand"><img src="icon.png" alt="" width="40" height="40">TravelYa</div>
+    <h1>Help &amp; tutorials</h1>
+    <p class="lede">Short videos that show TravelYa in action, from planning a trip with an AI assistant to finding your way once you are there.</p>
+  </header>
+
+  <h2>Video tutorials</h2>
+  <div class="videos">
+    <!-- To add a video: copy this <a class="video"> block, change the link, thumbnail, duration, chip, title and text. -->
+    <a class="video" href="https://youtu.be/zK5uWryI040">
+      <div class="thumb">
+        <img src="claude-code-trip.jpg" alt="" width="960" height="540" loading="lazy">
+        <span class="play" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.14v13.72a1 1 0 0 0 1.52.85l10.6-6.86a1 1 0 0 0 0-1.7L9.52 4.29A1 1 0 0 0 8 5.14z"/></svg>
+        </span>
+        <span class="duration">2:29</span>
+      </div>
+      <div class="body">
+        <span class="chip">Tutorial</span>
+        <h3>Plan a trip with Claude Code</h3>
+        <p>Export the TravelYa planning skill, let Claude Code interview you and research a trip to Moldova and Transnistria, then open the finished .travelya file in the app: 24 verified places with photos and a travel guide.</p>
+        <span class="watch">Watch on YouTube →</span>
+      </div>
+    </a>
+  </div>
+
+  <h2>Getting started</h2>
+  <ol class="steps">
+    <li><span class="n">1</span><div><strong>Create a trip</strong><span>Give it a name, then add places by searching or by long-pressing the map.</span></div></li>
+    <li><span class="n">2</span><div><strong>Or plan one with AI</strong><span>Optional, with your own API key: describe where you are going and what you like, and get places and a guide.</span></div></li>
+    <li><span class="n">3</span><div><strong>Or import a .travelya file</strong><span>Made by ChatGPT, Claude or another assistant with the planning skill from Settings → Export planning skill.</span></div></li>
+  </ol>
+
+  <section class="help">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+    <div>
+      <h2>Still stuck?</h2>
+      <p>Write to <a href="mailto:travelya.app@gmail.com?subject=TravelYa%3A%20Help">travelya.app@gmail.com</a>, or use Settings → Send feedback in the app.</p>
+    </div>
+  </section>
+
+  <footer>
+    <a href="../">Privacy policy</a>
+    <a href="../terms/">Terms of use</a>
+    <a href="https://play.google.com/store/apps/details?id=com.travelya">TravelYa on Google Play</a>
+  </footer>
+</main>
+</body>
+</html>
