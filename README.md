@@ -2,14 +2,11 @@
 
 Hosts the [TravelYa privacy policy](index.md) as a GitHub Pages site.
 
-**Currently private on purpose.** GitHub Pages on the free plan only serves public
-repositories, so the page goes live in two steps when TravelYa ships:
+Public URLs (GitHub Pages, deployed from `main` / `/ (root)`):
 
-1. Repo → **Settings → General → Danger Zone → Change visibility → Public**
-2. **Settings → Pages** → Deploy from a branch → `main` / `/ (root)` → Save
-
-The public URL will then be: <https://lobicode.github.io/travelya-privacy/>
-(terms of use at <https://lobicode.github.io/travelya-privacy/terms/>)
+- Privacy policy: <https://lobicode.github.io/travelya-privacy/>
+- Terms of use: <https://lobicode.github.io/travelya-privacy/terms/>
+- Help & tutorials: <https://lobicode.github.io/travelya-privacy/help/>
 
 The privacy policy URL goes into Play Console → App content → Privacy policy.
 
