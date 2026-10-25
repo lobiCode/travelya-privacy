@@ -32,8 +32,9 @@ document and re-check that the Play Console **Data safety** form still matches
 <https://lobicode.github.io/travelya-privacy/help/>, opened from the app (Settings → Help &
 tutorials, and the empty trip list). Colors and radii are the app's Trail tokens.
 
-To add a video, copy one `<a class="video">` block and change its link, thumbnail, duration, chip,
-title and text. Store the thumbnail next to the page (`help/<name>.jpg`, 960×540) rather than
+Videos are grouped by trip stage (`Plan your trip`, `While you travel`, …). To add a video, copy one
+`<a class="video">` block into the right section and change its link, thumbnail, duration, chip
+(the feature it shows), title and text. Store the thumbnail next to the page (`help/<name>.jpg`, 960×540) rather than
 loading it from YouTube, so the page makes no third-party requests:
 
 ```bash

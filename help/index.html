@@ -153,9 +153,11 @@
     <p class="lede">Short videos that show TravelYa in action, from planning a trip with an AI assistant to finding your way once you are there.</p>
   </header>
 
-  <h2>Video tutorials</h2>
+  <!-- Videos are grouped by trip stage. To add one: copy an <a class="video"> block into the right
+       section, change the link, thumbnail, duration, chip, title and text. A new stage gets its own
+       <h2> + <div class="videos">. -->
+  <h2>Plan your trip</h2>
   <div class="videos">
-    <!-- To add a video: copy this <a class="video"> block, change the link, thumbnail, duration, chip, title and text. -->
     <a class="video" href="https://youtu.be/zK5uWryI040">
       <div class="thumb">
         <img src="claude-code-trip.jpg" alt="" width="960" height="540" loading="lazy">
@@ -165,9 +167,28 @@
         <span class="duration">2:29</span>
       </div>
       <div class="body">
-        <span class="chip">Tutorial</span>
+        <span class="chip">Plan with AI</span>
         <h3>Plan a trip with Claude Code</h3>
         <p>Export the TravelYa planning skill, let Claude Code interview you and research a trip to Moldova and Transnistria, then open the finished .travelya file in the app: 24 verified places with photos and a travel guide.</p>
+        <span class="watch">Watch on YouTube →</span>
+      </div>
+    </a>
+  </div>
+
+  <h2>While you travel</h2>
+  <div class="videos">
+    <a class="video" href="https://youtu.be/S2SeQHOtgTw">
+      <div class="thumb">
+        <img src="visited-places.jpg" alt="" width="960" height="540" loading="lazy">
+        <span class="play" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.14v13.72a1 1 0 0 0 1.52.85l10.6-6.86a1 1 0 0 0 0-1.7L9.52 4.29A1 1 0 0 0 8 5.14z"/></svg>
+        </span>
+        <span class="duration">1:45</span>
+      </div>
+      <div class="body">
+        <span class="chip">Visited places</span>
+        <h3>Never forget where you've been</h3>
+        <p>Navigate a walk through Seville: each stop is marked visited when you get within 50 m, or tick it off yourself on the map or in your list. Every visit is kept in Where I've been, with a map of all your travels, filters by country or trip, and KML/GPX export.</p>
         <span class="watch">Watch on YouTube →</span>
       </div>
     </a>
