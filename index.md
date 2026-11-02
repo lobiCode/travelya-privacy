@@ -1,6 +1,6 @@
 # TravelYa Privacy Policy
 
-**Effective date: 10 October 2026**
+**Effective date: 1 November 2026**
 
 TravelYa is an offline-first trip planner for Android. It works without an account, has no
 analytics, no advertising, and no servers operated by the developer. Your trips, places, photos and
@@ -23,7 +23,8 @@ _"The developer" means the individual who publishes TravelYa on Google Play
   using **your own API key**. The developer never sees the key or the request.
 - **Place search** uses the free Photon geocoder (operated by Komoot) and map tiles come from
   OpenFreeMap; offline map data is downloaded from Geofabrik (OpenStreetMap data). Place images and
-  descriptions are fetched from Wikipedia/Wikimedia.
+  descriptions are fetched from Wikipedia/Wikimedia. Weather forecasts come from Open-Meteo, which
+  receives only a rounded coordinate.
 - Nothing reaches the developer unless **you choose to email** feedback or an AI-content report
   from the app (section 6).
 - You can delete everything at any time: delete trips in the app, remove API keys in settings, or
@@ -115,6 +116,7 @@ important details before you travel.
 | OpenFreeMap (`tiles.openfreemap.org`) | OpenFreeMap | Requests for the map tiles you view (tile coordinates; your IP is visible to any tile server) | Viewing the online map |
 | Geofabrik (`download.geofabrik.de`) | Geofabrik | Download of the country/region file you pick | Downloading offline maps |
 | Wikipedia / Wikimedia (`en.wikipedia.org`, `upload.wikimedia.org`) | Wikimedia Foundation | The title of the place an image/description is fetched for | Fetching place images and summaries |
+| Open-Meteo forecast API (`api.open-meteo.com`) | Open-Meteo | The coordinates of a trip's centre or of a stay, rounded to about 1 km; no key or account | Showing the weather forecast on a trip or a stay (cached on the device for a few hours) |
 | Link redirect resolution (`maps.app.goo.gl`) | Google | When you share a location link (e.g. from Google Maps) into TravelYa, the app opens the link to resolve it to coordinates | Resolving a shared location |
 
 Requests to these services identify the app (name, version and a contact address) in their
@@ -144,7 +146,7 @@ You can ask for an email to be deleted at any time.
 | Precise / approximate location | Show you on the map, routes from your position, better search results |
 | Foreground service (location, data sync) | Navigation; AI plan generation and map downloads with a visible notification |
 | Internet / network state | The requests described in sections 4 and 5 |
-| Notifications | Progress of navigation, downloads and AI generation |
+| Notifications | Progress of navigation, downloads and AI generation; check-in and check-out reminders for your stays (scheduled and shown on the device) |
 
 ## 8. Data retention and deletion
 
@@ -166,6 +168,7 @@ You can ask for an email to be deleted at any time.
 - OpenFreeMap: <https://openfreemap.org/privacy/>
 - Geofabrik: <https://www.geofabrik.de/geofabrik/imprint.html>
 - Wikimedia Foundation: <https://foundation.wikimedia.org/wiki/Policy:Privacy_policy>
+- Open-Meteo: <https://open-meteo.com/en/terms#privacy>
 
 ## 10. Children
 
