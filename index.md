@@ -1,6 +1,6 @@
 # TravelYa Privacy Policy
 
-**Effective date: 1 November 2026**
+**Effective date: 7 November 2026**
 
 TravelYa is an offline-first trip planner for Android. It works without an account, has no
 analytics, no advertising, and no servers operated by the developer. Your trips, places, photos and
@@ -115,7 +115,7 @@ important details before you travel.
 | Photon geocoder (`photon.komoot.io`) | Komoot | The place name you search for, and optionally the coordinates of the map/trip area to rank results; or coordinates for a reverse lookup (finding an address for a point) | Place search, adding a place, fixing a wrong address, resolving a location shared into TravelYa |
 | OpenFreeMap (`tiles.openfreemap.org`) | OpenFreeMap | Requests for the map tiles you view (tile coordinates; your IP is visible to any tile server) | Viewing the online map |
 | Geofabrik (`download.geofabrik.de`) | Geofabrik | Download of the country/region file you pick | Downloading offline maps |
-| Wikipedia / Wikimedia (`en.wikipedia.org`, `upload.wikimedia.org`) | Wikimedia Foundation | The title of the place an image/description is fetched for | Fetching place images and summaries |
+| Wikipedia / Wikimedia (`*.wikipedia.org`, `www.wikidata.org`, `commons.wikimedia.org`, `upload.wikimedia.org`) | Wikimedia Foundation | The name of the place an image/description is fetched for and, to find an article or photo of that place, its coordinates | Fetching place images and summaries, including finding a photo for an imported place that has none |
 | Open-Meteo forecast API (`api.open-meteo.com`) | Open-Meteo | The coordinates of a trip's centre or of a stay, rounded to about 1 km; no key or account | Showing the weather forecast on a trip or a stay (cached on the device for a few hours) |
 | Link redirect resolution (`maps.app.goo.gl`) | Google | When you share a location link (e.g. from Google Maps) into TravelYa, the app opens the link to resolve it to coordinates | Resolving a shared location |
 
